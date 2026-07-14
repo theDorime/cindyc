@@ -4,7 +4,7 @@ import '../styles/App.css';
 import React from 'react';
 //Nav bar template for current page 
 
-export function SideNavBar(page, dropDownPath, subtitle) {
+export function SideNavBar(page, subtitle) {
   //Initiate navigation
   const navigate = useNavigate();
   

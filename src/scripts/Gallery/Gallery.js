@@ -76,7 +76,7 @@ export function Gallery() {
     if (isGalleryOverview) {
         return (
             <div>
-                {SideNavBar('Gallery', match.pathname, 'Taken on Nikon EM')}
+                {SideNavBar('Gallery', 'Taken on Nikon EM')}
                 <div className="gallery-overview-container" onClick={() => setExpandedSection('')}>
                     <div className="gallery-group">
                         {galleryData.map(renderSectionCard)}
@@ -98,4 +98,5 @@ export function Gallery() {
             </div>
         )
     }
+    console.log("render", galleryData);
 }
