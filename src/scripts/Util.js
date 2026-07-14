@@ -16,29 +16,6 @@ export function SideNavBar(page, dropDownPath, subtitle) {
       { path: '/Gallery', text: 'Film Photos' },
   ]
 
-  const toggleStyle = {
-    backgroundColor: 'transparent',
-    border: 'none',
-    color: 'inherit',
-    cursor: 'pointer',
-    textDecoration: 'none',
-    outline: 'none',
-    boxShadow: 'none',
-    margin: '0.5px',
-    padding: '10px 20px'
-  };
-
-  const activeToggleStyle = {
-    backgroundColor: 'transparent',
-    border: 'none',
-    color: 'inherit',
-    cursor: 'pointer',
-    textDecoration: 'none',
-    outline: 'none',
-    boxShadow: 'none',
-    fontWeight: 'bold',
-    padding: '10px 20px'
-  };
   //Create nav
   return (
     <div>
