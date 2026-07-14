@@ -3,7 +3,7 @@ import { Route, Routes} from "react-router-dom"
 import { Home } from "./scripts/Home"
 import { Portfolio } from "./scripts/Portfolio"
 import { Game } from "./scripts/Game"
-import { FilmPhotos } from "./scripts/Gallery/Gallery"
+import { Gallery } from "./scripts/Gallery/Gallery"
 
 function App() {
  
@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/Game" element={<Game />} />
-        <Route path="/Gallery" element={<FilmPhotos />} />
+        <Route path="/Gallery" element={<Gallery />} />
       </Routes>
     </div>
   )

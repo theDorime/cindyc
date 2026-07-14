@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 
 const galleryData = require('../../jsons/gallery.json');
 
-export function FilmPhotos() {
+export function Gallery() {
     const match = useLocation();
     const pathName = match.pathname.replace('/', '');
     const [expandedSection, setExpandedSection] = useState('')
@@ -76,7 +76,7 @@ export function FilmPhotos() {
     if (isGalleryOverview) {
         return (
             <div>
-                {SideNavBar('Film Photos', match.pathname, 'Taken on Nikon EM')}
+                {SideNavBar('Gallery', match.pathname, 'Taken on Nikon EM')}
                 <div className="gallery-overview-container" onClick={() => setExpandedSection('')}>
                     <div className="gallery-group">
                         {galleryData.map(renderSectionCard)}
