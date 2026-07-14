@@ -1,48 +1,5 @@
 [
     {
-        "name": "Zion",
-        "path": "zion/",
-        "photos": {
-            "src": [
-                "zion_img0.jpg",
-                "zion_img1.jpg",
-                "zion_img2.jpg",
-                "zion_img3.jpg",
-                "zion_img4.jpg",
-                "zion_img5.jpg",
-                "zion_img6.jpg",
-                "zion_img7.jpg",
-                "zion_img8.jpg",
-                "zion_img9.jpg",
-                "zion_img10.jpg",
-                "zion_img11.jpg",
-                "zion_img12.jpg",
-                "zion_img13.jpg",
-                "zion_img14.jpg"
-            ]
-        }
-    },
-    {
-        "name": "Red_Rock",
-        "path": "redRock/",
-        "photos": {
-            "src": [
-                "redRock_img0.jpg",
-                "redRock_img1.jpg",
-                "redRock_img2.jpg",
-                "redRock_img3.jpg",
-                "redRock_img4.jpg",
-                "redRock_img5.jpg",
-                "redRock_img6.jpg",
-                "redRock_img7.jpg",
-                "redRock_img8.jpg",
-                "redRock_img9.jpg",
-                "redRock_img10.jpg",
-                "redRock_img11.jpg"
-            ]
-        }
-    },
-    {
         "name": "Puerto_Rico_1",
         "path": "puertoRico1/",
         "photos": {
