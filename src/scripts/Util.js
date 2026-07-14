@@ -1,39 +1,20 @@
 import { useNavigate } from 'react-router-dom';
-import { Navbar, Nav, Dropdown, Button} from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
 import '../styles/App.css';
-import React, { useState ,useRef } from 'react';
-
+import React from 'react';
 //Nav bar template for current page 
 
-export function SideNavBar(page, dropDownPath) {
+export function SideNavBar(page, dropDownPath, subtitle) {
   //Initiate navigation
   const navigate = useNavigate();
-
-  //Set home page path to '/'
-  let pageNav= page;
-  if (page === 'Home') {
-      pageNav = '/';
-  }
   
   //Map paths to text 
   const links = [ 
       { path: '/', text: 'Home' }, 
       { path: '/Portfolio', text: 'Portfolio' }, 
       { path: '/Game', text: 'Game' },
+      { path: '/Gallery', text: 'Film Photos' },
   ]
-
-  //Get gallery json data 
-  const galleryData = require('../jsons/gallery.json');
-
-  //Parse gallery data for dropdown items
-  let sectionLinks = [];
-  galleryData.forEach((section) => {
-    sectionLinks.push({ path: '/'+section.name, text: section.name.replaceAll("_", " ")})
-  })
-
-  //Dropdown bar state
-  const [showDropdown, setShowDropdown] = useState(false);
-
 
   const toggleStyle = {
     backgroundColor: 'transparent',
@@ -58,21 +39,6 @@ export function SideNavBar(page, dropDownPath) {
     fontWeight: 'bold',
     padding: '10px 20px'
   };
-
-  const itemStyle = {
-    backgroundColor: 'transparent',
-    border: 'none',
-    color: 'inherit',
-    cursor: 'pointer',
-    textDecoration: 'none',
-    outline: 'none',
-    boxShadow: 'none',
-    margin: '0.5px'
-    
-};
-
-  // const linksFiltered = links.filter(item => item.path !== pageNav && item.text !== page)
-  
   //Create nav
   return (
     <div>
@@ -82,26 +48,7 @@ export function SideNavBar(page, dropDownPath) {
               <Nav.Link onClick={() => navigate(link.path)} className={page === link.text ? "active" : ""}>{link.text}</Nav.Link>
           ))}
          </Nav>
-
-         <Dropdown
-         onMouseOver={() => setShowDropdown(true)}
-         onMouseLeave={() => setShowDropdown(false)}>
-              <Dropdown.Toggle style={page === 'Gallery' ? activeToggleStyle : toggleStyle} onMouseOver={() => setShowDropdown(true)}>
-          Gallery
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu
-          style={{ display: showDropdown ? 'block' : 'none' }}
-        >
-          {sectionLinks.map((link, index) => (
-           
-            <Button key={index} style={dropDownPath === link.path ? activeToggleStyle : toggleStyle} onClick={() => navigate(link.path)}>
-              {link.text}
-            </Button>
-          ))}
-        </Dropdown.Menu>
-        </Dropdown>
-
+        {subtitle && <div className="navbar-subtitle">{subtitle}</div>}
       </Navbar>
     </div>
   );

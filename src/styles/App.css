@@ -1,3 +1,7 @@
+html, body {
+  font-family: "Times New Roman", Times, serif;
+}
+
 h3 {
   left: 0;
   line-height: 100px;
@@ -16,11 +20,23 @@ p {
 
 .navBar {
   background-color: #c7c3ae;
-  align-items: left;
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
   top: 0;
   width: 100%;
-  
+}
+
+.navbar-subtitle {
+  font-size: 1.25rem;
+  color: #000;
+  font-style: italic;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
 }
 
 .active {
@@ -29,6 +45,29 @@ p {
 
 body {
   padding-top: 60px;
+}
+
+/* Responsive navbar text */
+@media (max-width: 768px) {
+  .navbar-subtitle {
+    font-size: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 8px 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .nav-link {
+    font-size: 0.75rem;
+    padding: 6px 8px !important;
+  }
 }
 
 

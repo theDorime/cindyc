@@ -34,7 +34,7 @@ export function Portfolio() {
         <br/><br/>
 
         <a href="https://github.com/theDorime/cindyc">
-            <button type="button" class="btn btn-dark">Site's Github Repo</button>
+            <button type="button" class="btn btn-dark">Resume</button>
         </a>
         
         </h3>
